@@ -4,7 +4,7 @@ $(function() {
 
     var receiveEvent = function(event) {
         $("#event-data").html("Event data: "+event.data);
-    }
+    };
 
     dateSocket.onmessage = receiveEvent
-})
+});

@@ -53,4 +53,12 @@ public class Application extends Controller {
 		return ok(index.render());
 	}
 
+	public static Result send() {
+		return ok(send.render());
+	}
+
+	public static Result sendEvent() {
+		return ok();
+	}
+
 }

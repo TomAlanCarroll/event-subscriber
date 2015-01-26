@@ -1,0 +1,28 @@
+@main("Send Event") {
+    <h1>Send Event</h1>
+    <form id="event-form" action="send">
+        <label for="event-data">Event Data:</label>
+        <input type="text" id="event-data" name="event-data" value="Event Data" /><br />
+        <input type="submit" id="submit-event" value="Submit Event" />
+    </form>
+
+    <script>
+    $("#event-form").submit(function (event) {
+        // Stop form from submitting normally
+        event.preventDefault();
+
+        // Get some values from elements on the page:
+        var $form = $(this),
+        postEventData = $form.find("input[name='event-data']").val(),
+        url = $form.attr("action");
+
+        // Send the data using post
+        var posting = $.post(url, {eventData: postEventData});
+
+        // Put the results in a div
+        posting.done(function (data) {
+            alert("Event has been sent.");
+        });
+    });
+    </script>
+}
