@@ -1,7 +1,7 @@
-@(message: String)
+@main("Event Subscriber with Play") {
 
-@main("Welcome to Play") {
+    <h1>Event Data</h1>
+    <div id="event-data"></div>
 
-    @play20.welcome(message, style = "Java")
-
+   <script type="text/javascript" charset="utf-8" src="@routes.Application.eventJs()"></script>
 }
