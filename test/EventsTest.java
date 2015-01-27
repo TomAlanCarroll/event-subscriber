@@ -26,7 +26,7 @@ import static org.fest.assertions.Assertions.*;
 * If you are interested in mocking a whole application, see the wiki for more details.
 *
 */
-public class ApplicationTest {
+public class EventsTest {
 
     @Test
     public void simpleCheck() {
@@ -36,9 +36,9 @@ public class ApplicationTest {
 
     @Test
     public void renderTemplate() {
-        Content html = views.html.index.render("Your new application is ready.");
+        Content html = views.html.index.render();
         assertThat(contentType(html)).isEqualTo("text/html");
-        assertThat(contentAsString(html)).contains("Your new application is ready.");
+        assertThat(contentAsString(html)).contains("Event Data");
     }
 
 
