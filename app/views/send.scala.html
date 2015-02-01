@@ -1,14 +1,23 @@
 @main("Send Event") {
     <h1>Send Event</h1>
-    <form id="event-form" action="send">
-        <label for="event-data">Event Data:</label>
-        <input type="text" id="event-data" name="event-data" value="Event Data" />
-        <input type="submit" id="submit-event" value="Submit Event" />
+    <form id="goals-form" action="send">
+        <label for="a-goals">Team A Goals:</label>
+        <input type="text" id="a-goals" name="a-goals" value="0" />
+        <br />
+        <label for="b-goals">Team B Goals:</label>
+        <input type="text" id="b-goals" name="b-goals" value="0" />
+        <input type="submit" id="submit-event" value="Submit Goals" />
+    </form>
+
+    <form id="reset-timer-form" action="resetTimer">
+        <p>Current Minute: <span id="currentMinute">0</span></p>
+        <br />
+        <input type="submit" id="reset-timer" value="Reset Timer" />
     </form>
 
     <div>
-        Status: <span id="form-status">Please submit an event.</span>
+        Status: <span id="form-status">Waiting for game data&hellip;</span>
     </div>
 
-    <script type="text/javascript" charset="utf-8" src="@routes.Events.eventJs()"></script>
+    <script type="text/javascript" charset="utf-8" src="@routes.Soccer.soccerJs()"></script>
 }

@@ -6,9 +6,9 @@ import akka.contrib.pattern.DistributedPubSubExtension;
 import akka.contrib.pattern.DistributedPubSubMediator;
 
 /**
- * A generalized model of a Publisher actor
+ * A generalized model of a SoccerGame actor
  */
-public class Publisher extends UntypedActor {
+public class SoccerGame extends UntypedActor {
     /**
      * The mediator for this distributed publish subscribe extension
      */
@@ -16,7 +16,7 @@ public class Publisher extends UntypedActor {
 
     /**
      * Processes incoming messages that have been sent to this {@code Actor}
-     * @param msg An {@code Object} or {@code String} to publish to the {@link Subscriber}s
+     * @param msg An {@code Object} or {@code String} to publish to the {@link SoccerData}s
      */
     @Override
     public void onReceive(Object msg) {

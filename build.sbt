@@ -12,7 +12,13 @@ libraryDependencies ++= Seq(
   cache,
   "com.typesafe.akka" %% "akka-actor" % "2.3.7",
   "com.typesafe.akka" %% "akka-cluster" % "2.3.7",
-  "com.typesafe.akka" %% "akka-contrib" % "2.3.7"
+  "com.typesafe.akka" %% "akka-contrib" % "2.3.7",
+  "com.typesafe.play.plugins" %% "play-plugins-redis" % "2.3.1"
+)
+
+resolvers ++= Seq(
+  "pk11 repo" at "http://pk11-scratch.googlecode.com/svn/trunk",
+  "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 )
 
 initialize := {
